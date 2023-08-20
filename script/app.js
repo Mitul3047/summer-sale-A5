@@ -55,9 +55,9 @@ function goHome() {
     // window.location.href = "index.html"
     total = parseFloat(0);
     document.getElementById("selected-items").innerText= "";
-    document.getElementById("purchase-total-price").innerText= 0;
-    document.getElementById("discount-field").innerText= 0;
-    document.getElementById("discount-total").innerText= 0;
+    document.getElementById("purchase-total-price").innerText= "00";
+    document.getElementById("discount-field").innerText= "00";
+    document.getElementById("discount-total").innerText= "00";
     document.getElementById("cupon-confirm").value= "";
     document.getElementById("btn-purchase").setAttribute('disabled', true);
 }
