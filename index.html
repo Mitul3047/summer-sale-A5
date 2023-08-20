@@ -31,13 +31,13 @@
         <!-- main conatiner -->
         <div class="flex md:flex-row flex-col justify-center gap-6 ">
             <!-- card collection -->
-            <div>
+            <div class="product-container">
                 <div class="kitchen">
                     <h3 class="text-4xl font-semibold text-[#111] mb-8">Kitchenware</h3>
                     <!-- card -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <!-- card-1 -->
-                        <div class="card  bg-base-100 ">
+                        <div class="card  bg-base-100  " onclick="handleCLikBtn(this)">
                             <figure class="px-8 pt-10 pb-8 bg-[#1111110D] m-3">
                                 <img src="./images/prod1.png" alt="k.accersories1" class="rounded-lg" />
                             </figure>
@@ -50,12 +50,12 @@
                             </div>
                             <div class="card-body items-center text-center">
                                 <h2 class="card-title text-xl ">K. Accessories</h2>
-                                <p class="text-[#11111180] text-xl mt-2 "> <span>39.00</span> TK</p>
+                                <p class="text-[#11111180] text-xl mt-2 ">39.00 TK</p>
 
                             </div>
                         </div>
                         <!-- card-2 -->
-                        <div class="card  bg-base-100 ">
+                        <div class="card  bg-base-100 " onclick="handleCLikBtn(this)">
                             <figure class="px-8 pt-10 pb-8 bg-[#1111110D] m-3">
                                 <img src="./images/prod2.png" alt="k.accersories1" class="rounded-lg" />
                             </figure>
@@ -68,12 +68,12 @@
                             </div>
                             <div class="card-body items-center text-center">
                                 <h2 class="card-title text-xl ">K. Accessories1</h2>
-                                <p class="text-[#11111180] text-xl mt-2 "> <span>25.00</span> TK</p>
+                                <p class="text-[#11111180] text-xl mt-2 ">25.00 TK</p>
 
                             </div>
                         </div>
                         <!-- card-3 -->
-                        <div class="card  bg-base-100 ">
+                        <div class="card  bg-base-100 " onclick="handleCLikBtn(this)">
                             <figure class="px-8 pt-10 pb-8 bg-[#1111110D] m-3">
                                 <img src="./images/prod3.png" alt="k.accersories1" class="rounded-lg" />
                             </figure>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="card-body items-center text-center">
                                 <h2 class="card-title text-xl ">Home Cooker</h2>
-                                <p class="text-[#11111180] text-xl mt-2 "> <span>49.00</span> TK</p>
+                                <p class="text-[#11111180] text-xl mt-2 ">49.00 TK</p>
 
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                     <h3 class="text-4xl font-semibold text-[#111] mb-8">Sportswear</h3>
                     <div class=" grid md:grid-cols-3 grid-cols-1 gap-6">
                         <!-- card-4 -->
-                        <div class="card  bg-base-100 ">
+                        <div class="card  bg-base-100 " onclick="handleCLikBtn(this)">
                             <figure class="px-8 pt-10 pb-8 bg-[#1111110D] m-3">
                                 <img src="./images/prod4.png" alt="k.accersories1" class="rounded-lg" />
                             </figure>
@@ -110,12 +110,12 @@
                             </div>
                             <div class="card-body items-center text-center">
                                 <h2 class="card-title text-xl ">Sports Back Cap</h2>
-                                <p class="text-[#11111180] text-xl mt-2 "> <span>49.00</span> TK</p>
+                                <p class="text-[#11111180] text-xl mt-2 "> 49.00 TK</p>
 
                             </div>
                         </div>
                         <!-- card-5 -->
-                        <div class="card  bg-base-100 ">
+                        <div class="card  bg-base-100 " onclick="handleCLikBtn(this)">
                             <figure class="px-8 pt-10 pb-8 bg-[#1111110D] m-3">
                                 <img src="./images/prod5.png" alt="k.accersories1" class="rounded-lg" />
                             </figure>
@@ -128,12 +128,12 @@
                             </div>
                             <div class="card-body items-center text-center">
                                 <h2 class="card-title text-xl ">Full Jersey Set</h2>
-                                <p class="text-[#11111180] text-xl mt-2 "> <span>69.00</span> TK</p>
+                                <p class="text-[#11111180] text-xl mt-2 ">69.00 TK</p>
 
                             </div>
                         </div>
                         <!-- card-6 -->
-                        <div class="card  bg-base-100 ">
+                        <div class="card  bg-base-100 " onclick="handleCLikBtn(this)" >
                             <figure class="px-8 pt-10 pb-8 bg-[#1111110D] m-3">
                                 <img src="./images/prod6.png" alt="k.accersories1" class="rounded-lg" />
                             </figure>
@@ -146,7 +146,7 @@
                             </div>
                             <div class="card-body items-center text-center">
                                 <h2 class="card-title text-xl ">Sports cates</h2>
-                                <p class="text-[#11111180] text-xl mt-2 "> <span>159.00</span> TK</p>
+                                <p class="text-[#11111180] text-xl mt-2 ">159.00 TK</p>
 
                             </div>
                         </div>
@@ -157,28 +157,38 @@
             <div>
                 <!-- coupon area -->
                 <div class="bg-white p-6 rounded-lg mb-6">
-                    <h3 class="text-2xl font-medium mb-4">Have coupon?</h3>
+                    <h3 class="text-2xl font-medium mb-4" id="coupon">Have coupon?</h3>
                     <div class="flex justify-start items-center">
-                    <input type="text" placeholder="Coupon code "
-                        class="input input-bordered w-2/3 items-start  rounded-r-none -mr-1  " />
-                    <button class="btn bg-[#E527B2] text-white rounded-l-none ml-0 ">Apply</button>
-                </div>
+                        <!-- cupon field -->
+                        <input type="text" placeholder="Coupon code" id="cupon-confirm"
+                            class="input input-bordered w-2/3 items-start  rounded-r-none   " />
+                        <!-- cupon button -->
+                        <button id="btn-coupon" disabled class="btn bg-[#E527B2] text-white rounded-l-none ml-0 ">Apply</button>
+                    </div>
                 </div>
                 <!-- amount calculation -->
                 <div class="bg-white p-6">
-                    <div></div>
-                <hr>
-                <div class="text-2xl font-medium ">
-                    <h3>Total price:<span class="text-[#11111180]"><span>00</span> TK</span></h3>
-                    <h3>Discount:<span class="text-[#11111180]"><span>00</span> TK</span></h3>
-                    <h3>Total :<span class="text-[#11111180]"><span>00</span> TK</span></h3>
+                    
+                    <!-- product list will be added here -->
+                    <div class="selected-items text-2xl font-medium space-y-4 " id="selected-items" ></div>
+                    <hr class="my-6">
+                    <!-- total and discount area -->
+                    <div class="text-2xl font-medium space-y-6 ">
+                        <!-- total of all product -->
+                        <h3>Total price:<span class="text-[#11111180]"><span id="purchase-total-price">00</span> TK</span></h3>
+                        <!-- discount after applying coupon -->
+                        <h3>Discount:<span class="text-[#11111180]"><span id="discount-field">00</span> TK</span></h3>
+                        <!-- total after discount -->
+                        <h3>Total :<span class="text-[#11111180]"><span>00</span> TK</span></h3>
+                    </div>
+                    <hr class="my-6">
+                    <!-- purches button -->
+                    <button id="btn-purchase" disabled class="btn bg-[#E527B2] text-white w-full">Make Purchase</button>
                 </div>
-            <hr class="my-6">
-            <button class="btn bg-[#E527B2] text-white w-full">Make Purchase</button>   
-            </div>
             </div>
         </div>
     </main>
+    <script src="./script/app.js"></script>
 </body>
 
 </html>
