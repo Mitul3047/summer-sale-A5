@@ -43,8 +43,8 @@ document.getElementById("btn-coupon").addEventListener('click', function () {
         const coupon = document.getElementById('coupon');
         coupon.innerText = 'YOU HAVE RECIVED 20% DISCOUNT';
         const discountValue = discountText.innerText = parseFloat(total * 0.20).toFixed(2);
-        const finalTotal = discountTotal.innerText = total - discountValue;
-        finalTotal.toFixed(2);
+        const finalTotal = discountTotal.innerText = (total - discountValue).toFixed(2);
+        // finalTotal.;
         document.getElementById("cupon-confirm").value= "";
     } else {
         alert("Invalid Coupon")
@@ -60,9 +60,12 @@ function goHome() {
     document.getElementById("discount-total").innerText= "00";
     document.getElementById("cupon-confirm").value= "";
     document.getElementById("btn-purchase").setAttribute('disabled', true);
+    document.getElementById("btn-coupon").setAttribute('disabled', true);
+    document.getElementById("coupon").innerText ="Have coupon?";
 }
 
 
+// ADD FONT FAMILY
 
 
 
