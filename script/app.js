@@ -33,18 +33,17 @@ function handleCLikBtn(target) {
     }
 }
 
-// CUPON BUTTON
+// CUPON BUTTON CONDITION
 
 document.getElementById("btn-coupon").addEventListener('click', function () {
     const discountText = document.getElementById('discount-field');
     const discountTotal = document.getElementById('discount-total');
-    const couponCode = document.getElementById("cupon-confirm").value
+    const couponCode = document.getElementById("cupon-confirm").value;
     if (couponCode === "SELL200") {
         const coupon = document.getElementById('coupon');
         coupon.innerText = 'YOU HAVE RECIVED 20% DISCOUNT';
         const discountValue = discountText.innerText = parseFloat(total * 0.20).toFixed(2);
         const finalTotal = discountTotal.innerText = (total - discountValue).toFixed(2);
-        // finalTotal.;
         document.getElementById("cupon-confirm").value= "";
     } else {
         alert("Invalid Coupon")
